@@ -6,14 +6,14 @@
 /*   By: eneto <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:48:44 by eneto             #+#    #+#             */
-/*   Updated: 2025/04/03 16:13:08 by eneto            ###   ########.fr       */
+/*   Updated: 2025/04/03 19:56:52 by eneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_H
 #define CUB3D_H
 
-#include "../minilibx-linux/mlx_int.h"
+#include "./minilibx-linux/mlx_int.h"
 #include "../inc/libft/libft.h"
 
 #endif

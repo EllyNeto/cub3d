@@ -6,14 +6,19 @@
 /*   By: eneto <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 15:48:44 by eneto             #+#    #+#             */
-/*   Updated: 2025/04/04 09:22:29 by eneto            ###   ########.fr       */
+/*   Updated: 2025/04/04 10:12:58 by eneto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_H
 #define CUB3D_H
 
-#include "./minilibx-linux/mlx_int.h"
-#include "../inc/libft/libft.h"
+#include "./minilibx-linux/mlx.h"
+#include "./libft/libft.h"
+
+typedef struct  s_img
+{
+    
+}       t_img;
 
 #endif

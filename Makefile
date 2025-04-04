@@ -6,30 +6,32 @@
 #    By: eneto <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/03 15:45:09 by eneto             #+#    #+#              #
-#    Updated: 2025/04/03 19:55:28 by eneto            ###   ########.fr        #
+#    Updated: 2025/04/04 09:29:08 by eneto            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = cub3d
 CC = cc
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
 OBJ = $(SOURCES:.c=.o)
-LIBFT = ./inc/libft/libft.a
+LIBFT = ./inc/libft
 MLX = ./inc/minilibx-linux
 SOURCES = src/main.c\
 
 all : $(NAME)
 
 $(NAME): $(OBJ)
-	@make -s -C $(MLX)
 	@make -s -C $(LIBFT)
-	$(CC) $(FLAGS) -o $(NAME) -L$(LIBFT) -L$(MLX)  -lft -lmlx -lm -lX11 -lXext
+	@make -s -C $(MLX)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME) -L$(LIBFT) -L$(MLX)  -lft -lmlx -lm -lX11 -lXext
 
 clean:
 	$(RM) $(OBJ)
 
 fclean: clean
 	$(RM) $(NAME)
+	make fclean -C $(LIBFT)
+	make clean -C $(MLX)
 
 re: fclean all
